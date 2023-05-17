@@ -62,12 +62,3 @@ export const App = () => {
   </>
   )
 }
-
-// >
-// {
-//   pageCount.map((num, index) => <span
-   
-
-
-//   >{num + 1}  </span>)
-// }
