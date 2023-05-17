@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useFetch } from './useFetch'
 
-import './App.css'
 import { Button, Table } from 'react-bootstrap'
 
 export const App = () => {
   const [todos, pending] = useFetch(`https://jsonplaceholder.typicode.com/todos`)
 
   const [pageSize,setPageSize] =useState(10)
+  const [currentPage, setCurrentPage] = useState(1)
+  
   let pageCount = Math.ceil(todos.length / pageSize)
   pageCount = Array.from(Array(pageCount).keys())
-  const [currentPage, setCurrentPage] = useState(1)
 
 
   return (<>
